@@ -1,0 +1,44 @@
+# Ignore unnecessary files and directories
+Dockerfiles/
+docker-compose.yml
+
+# Ignore editor configuration files
+.vscode/
+.idea/
+*.code-workspace
+
+# Ignore unnecessary Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+
+# Ignore system temporary files and directories
+*.swp
+*.swo
+*.DS_Store
+*.log
+*.bak
+*.tmp
+Thumbs.db
+desktop.ini
+
+# Ignore Poetry and other dependency manager configuration files that can be regenerated
+poetry.lock
+
+# Ignore virtual environment directories
+venv/
+env/
+.venv/
+.env/
+
+# Ignore WSL configurations (if applicable)
+.wslconfig
+
+# Ignore test directories (if tests are not needed in production)
+tests/
+
+# Ignore build files that may be generated
+build/
+dist/

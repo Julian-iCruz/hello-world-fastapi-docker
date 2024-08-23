@@ -1,0 +1,27 @@
+services:
+  app-fastapi:
+    build:
+      context: ./
+      dockerfile: dockerfiles/Dockerfile
+    image: app-fastapi:latest
+    container_name: app-fastapi
+    volumes:
+      - ./app:/app
+    # env_file:
+    #   - .env
+    ports:
+      - "7070:8000"
+
+  app-fastapi-debug:
+    build:
+      context: ./
+      dockerfile: dockerfiles/Dockerfile.debug
+    image: app-fastapi:debug
+    container_name: app-fastapi-debug
+    volumes:
+      - ./app:/app
+    # env_file:
+    #   - .env
+    ports:
+      - 5678:5678
+      - 7071:8000
